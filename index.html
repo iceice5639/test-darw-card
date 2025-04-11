@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,13 +7,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>เลือกไพ่ทาโรต์</h1>
-  <div id="deck" onclick="drawCard()"></div>
-  <div id="card" onclick="flipCard()">
-    <div class="front"></div>
-    <div class="back"></div>
+  <div class="container">
+    <div id="deck" onclick="drawCard()">
+      <img src="https://i.imgur.com/4XrhGdp.jpg" alt="Tarot Deck" />
+    </div>
+    <div id="card" class="hidden">
+      <img class="front" src="" alt="Tarot Card Front" />
+      <p class="meaning"></p>
+    </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
