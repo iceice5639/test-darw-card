@@ -12,22 +12,18 @@ const cards = [
 ];
 
 function drawCard() {
-  console.log("drawCard function called");
-
   const cardContainer = document.getElementById('card');
   const front = cardContainer.querySelector('.front');
   const meaningText = cardContainer.querySelector('.meaning');
 
-  console.log("cardContainer:", cardContainer);
-  console.log("front element:", front);
-  console.log("meaningText element:", meaningText);
-
   const randomCard = cards[Math.floor(Math.random() * cards.length)];
-  console.log("randomCard selected:", randomCard);
+
+  console.log("🎴 กำลังสุ่มไพ่...");
+  console.log("🖼️ รูปภาพไพ่:", randomCard.image);
+  console.log("🔮 คำทำนาย:", randomCard.meaning);
 
   front.src = randomCard.image;
   meaningText.textContent = randomCard.meaning;
 
   cardContainer.classList.remove('hidden');
-  console.log("Card revealed on UI");
 }
