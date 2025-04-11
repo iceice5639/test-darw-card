@@ -1,66 +1,30 @@
-body {
-  background: linear-gradient(to bottom, #1b1b2f, #3a3a5c);
-  color: white;
-  font-family: 'Georgia', serif;
-  text-align: center;
-  padding: 2rem;
+const cards = [
+  { image: 'https://i.imgur.com/fY2m3Qa.jpg', meaning: 'ความรัก การอดทนใจ ความสัมพันธ์ดี' },
+  { image: 'https://i.imgur.com/Oz8qGAB.jpg', meaning: 'เริ่มต้นใหม่ การเดินทาง' },
+  { image: 'https://i.imgur.com/EoZg3qe.jpg', meaning: 'การเปลี่ยนแปลง การเติบโต' },
+  { image: 'https://i.imgur.com/tQOzBoN.jpg', meaning: 'ปัญหาและบทเรียน' },
+  { image: 'https://i.imgur.com/BXx6XKr.jpg', meaning: 'ความมั่นคงและความปลอดภัย' },
+  { image: 'https://i.imgur.com/F5TzEjX.jpg', meaning: 'อารมณ์และความรู้สึก' },
+  { image: 'https://i.imgur.com/Z2YazrI.jpg', meaning: 'ความฝันและความหวัง' },
+  { image: 'https://i.imgur.com/jk3lZOd.jpg', meaning: 'การวางแผนและอนาคต' },
+  { image: 'https://i.imgur.com/GYo1Svp.jpg', meaning: 'พลังและการควบคุม' },
+  { image: 'https://i.imgur.com/4XrhGdp.jpg', meaning: 'การตัดสินใจและโชคชะตา' }
+];
+
+function drawCard() {
+  const card = document.getElementById('card');
+  const front = card.querySelector('.front');
+  const back = card.querySelector('.back');
+  const random = Math.floor(Math.random() * cards.length);
+  const selected = cards[random];
+
+  front.style.backgroundImage = `url(${selected.image})`;
+  back.innerText = selected.meaning;
+
+  card.style.display = 'block';
+  card.classList.remove('flipped');
 }
 
-#deck {
-  width: 150px;
-  height: 200px;
-  margin: 30px auto;
-  background-image: url('https://i.imgur.com/6Oe7cKU.png');
-  background-size: cover;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-  transition: transform 0.3s;
-}
-#deck:hover {
-  transform: scale(1.05);
-}
-
-#card {
-  width: 150px;
-  height: 200px;
-  margin: 0 auto;
-  perspective: 1000px;
-  display: none;
-  position: relative;
-}
-
-#card .front, #card .back {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-  transition: transform 0.6s;
-}
-
-#card .front {
-  transform: rotateY(0deg);
-}
-
-#card .back {
-  background: #fff;
-  color: #000;
-  transform: rotateY(180deg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  font-size: 1rem;
-}
-
-#card.flipped .front {
-  transform: rotateY(180deg);
-}
-
-#card.flipped .back {
-  transform: rotateY(360deg);
+function flipCard() {
+  document.getElementById('card').classList.toggle('flipped');
 }
