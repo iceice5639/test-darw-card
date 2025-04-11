@@ -27,6 +27,7 @@ body {
   margin: 0 auto;
   perspective: 1000px;
   display: none;
+  position: relative;
 }
 
 #card .front, #card .back {
@@ -63,4 +64,3 @@ body {
 #card.flipped .back {
   transform: rotateY(360deg);
 }
-
