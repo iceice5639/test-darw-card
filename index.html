@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tarot Fantasy</title>
+  <title>Fantasy Tarot</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <div id="deck" onclick="drawCard()">
-      <img src="https://i.imgur.com/4XrhGdp.jpg" alt="Tarot Deck" />
-    </div>
+    <h1>✨ สำรับไพ่ทาโรต์ ✨</h1>
+    <div id="deck" onclick="drawCard()"></div>
     <div id="card" class="hidden">
-      <img class="front" src="" alt="Tarot Card Front" />
-      <p class="meaning"></p>
+      <img class="front" src="" alt="Tarot Card" />
+      <div class="meaning"></div>
     </div>
   </div>
   <script src="script.js"></script>
