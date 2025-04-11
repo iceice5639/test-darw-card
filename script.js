@@ -1,14 +1,11 @@
 const cards = [
-  { image: 'https://i.imgur.com/FY2m3Qa.jpg', meaning: 'ความรัก การอุทิศใจ ความสัมพันธ์' },
-  { image: 'https://i.imgur.com/Oz8gGAB.jpg', meaning: 'เริ่มต้นใหม่ การเดินทาง' },
-  { image: 'https://i.imgur.com/EoZg3qe.jpg', meaning: 'การเปลี่ยนแปลง การเติบโต' },
-  { image: 'https://i.imgur.com/tQQzBoN.jpg', meaning: 'ปัญหาและบทเรียน' },
-  { image: 'https://i.imgur.com/BX6x6rK.jpg', meaning: 'อำนาจและความปลอดภัย' },
-  { image: 'https://i.imgur.com/F5TiEzF.jpg', meaning: 'ความเสียสละ ความรู้สึก' },
-  { image: 'https://i.imgur.com/ZZYazr1.jpg', meaning: 'ความฝันและความหวัง' },
-  { image: 'https://i.imgur.com/Xi3L0rd.jpg', meaning: 'ความทนและอุปสรรค' },
-  { image: 'https://i.imgur.com/GYOlSvp.jpg', meaning: 'พลังและการควบคุม' },
-  { image: 'https://i.imgur.com/4XrhGdp.jpg', meaning: 'การตัดสินใจและโชคชะตา' }
+  { image: 'images/card1.png', meaning: 'ความรัก การอุทิศใจ ความสัมพันธ์' },
+  { image: 'images/card2.png', meaning: 'เริ่มต้นใหม่ การเดินทาง' },
+  { image: 'images/card3.png', meaning: 'การเปลี่ยนแปลง การเติบโต' },
+  { image: 'images/card4.png', meaning: 'ปัญหาและบทเรียน' },
+  { image: 'images/card5.png', meaning: 'อำนาจและความปลอดภัย' },
+  { image: 'images/card6.png', meaning: 'ความเสียสละ ความรู้สึก' },
+  { image: 'images/card7.png', meaning: 'ความฝันและความหวัง' },
 ];
 
 function drawCard() {
