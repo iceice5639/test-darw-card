@@ -1,21 +1,21 @@
 body {
   font-family: 'Mali', cursive;
-  background: linear-gradient(#1e0033, #3e0066);
-  color: white;
+  background: linear-gradient(to right, #2b1055, #7597de);
+  color: #fff;
+  text-align: center;
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 
 .container {
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 #deck {
   width: 120px;
   height: 180px;
-  margin: 0 auto;
-  background-image: url('https://i.imgur.com/zfCGfRt.png'); /* หลังไพ่ */
+  margin: 30px auto;
+  background-image: url('https://i.imgur.com/8eQG0G0.png'); /* หลังไพ่ */
   background-size: cover;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -26,28 +26,39 @@ body {
 }
 
 #card {
-  margin-top: 40px;
-  animation: bounce 0.8s ease;
+  margin: 30px auto;
+  width: 200px;
+  transition: transform 0.5s ease;
+  animation: bounceIn 0.8s ease;
 }
 
-#card img {
-  width: 200px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #fff;
+#card img.front {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: transform 0.6s;
+}
+
+#card img.front:hover {
+  transform: rotateY(180deg);
 }
 
 .meaning {
-  margin-top: 20px;
-  font-size: 1.3em;
+  margin-top: 10px;
+  font-size: 1.2em;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 8px;
 }
 
 .hidden {
   display: none;
 }
 
-@keyframes bounce {
-  0%   { transform: scale(0.2); opacity: 0; }
-  60%  { transform: scale(1.1); opacity: 1; }
+@keyframes bounceIn {
+  0%   { transform: scale(0.3); opacity: 0; }
+  50%  { transform: scale(1.05); opacity: 1; }
+  70%  { transform: scale(0.9); }
   100% { transform: scale(1); }
 }
